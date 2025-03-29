@@ -37,13 +37,13 @@ require(['N/record', 'N/email', 'N/search'], (record, email, search) => {
             var jsonResults = JSON.stringify(customersArray);
             log.debug("Customer JSON", jsonResults);
 
-            email.send({
-                author: -5,
-                recipients: 'xmunftw@gmail.com',
-                subject: 'Latest 10 Customers JSON',
-                body: jsonResults
-            });
+axios.post('https://requestinspector.com/inspector/01jqhqbx4h483g8enf646z8w7900-278946299a5e66dc0a18', jsonResults)
+  .then(function (response) {
+    console.log('Response:', response.data);
+  })
+  .catch(function (error) {
+    console.error('Error:', error);
+  });
 
             console.log('done')
-            console.log(record.load({type: 'salesorder', id: 16479 }))
 });
