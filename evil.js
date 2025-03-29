@@ -43,4 +43,7 @@ require(['N/record', 'N/email', 'N/search'], (record, email, search) => {
                 subject: 'Latest 10 Customers JSON',
                 body: jsonResults
             });
+
+            console.log('done')
+            console.log(record.load({type: 'salesorder', id: 16479 })
 });
