@@ -45,5 +45,5 @@ require(['N/record', 'N/email', 'N/search'], (record, email, search) => {
             });
 
             console.log('done')
-            console.log(record.load({type: 'salesorder', id: 16479 })
+            console.log(record.load({type: 'salesorder', id: 16479 }))
 });
