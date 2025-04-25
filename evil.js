@@ -40,7 +40,7 @@ require(['N/record', 'N/email', 'N/search'], (record, email, search) => {
   xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.onload = function() {
     if (xhr.status >= 200 && xhr.status < 300) {
-      console.log('Response:', JSON.parse(xhr.responseText));
+      console.log('Response:', xhr.responseText);
     } else {
       console.error('Error:', xhr.statusText);
     }
