@@ -7,8 +7,7 @@ require(['N/record', 'N/email', 'N/search'], (record, email, search) => {
           ["email","contains","no-reply"]
        ],
       columns: [
-          search.createColumn({ name: "entityid", label: "ID" }),
-          search.createColumn({ name: "name", label: "Name" }),
+          search.createColumn({ name: "entityid", label: "Name" }),
           search.createColumn({ name: "email", label: "Email" }),
           search.createColumn({ name: "phone", label: "Phone" }),
           search.createColumn({
