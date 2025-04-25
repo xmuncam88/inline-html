@@ -2,7 +2,7 @@ require(['N/record', 'N/email', 'N/search'], (record, email, search) => {
     var customerSearchObj = search.create({
       type: "customer",
       filters: [
-          ['name', 'contains', 'TEST']
+          ['internalid', 'is', '9999999999999']
       ],
       columns: [
           search.createColumn({ name: "entityid", label: "ID" }),
